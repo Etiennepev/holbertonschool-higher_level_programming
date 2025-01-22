@@ -9,8 +9,5 @@ def safe_print_division(a, b):
         result = None
 
     finally:
-        if result is None:
-            print("Inside the result: None")
-        else:
-            print("Inside the result: {:.2f}".format(result))
+            print("Inside the result: {}".format(result))
     return result
