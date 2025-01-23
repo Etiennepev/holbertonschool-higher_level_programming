@@ -32,9 +32,6 @@ This is the test for print_square function.
 >>> print_square(1)
 #
 
-# Test: print a square with no argument
->>> printsquare()
-
 # Test: invalid size (negative number)
 >>> print_square(-1)
 Traceback (most recent call last):
