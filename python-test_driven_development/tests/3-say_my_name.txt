@@ -1,0 +1,25 @@
+"""
+This is the test module for say_my_name.
+
+The example module supplies one function, say_my_name. 
+
+"""
+
+# Importing the module
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+# Testing two string 
+>>> say_my_name("John", "Wick")
+My name is John Wick
+
+# Testing wrong type first argument
+>>> say_my_name(12, "Wick")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Testing empty argument
+>>> say_my_name("", "")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
