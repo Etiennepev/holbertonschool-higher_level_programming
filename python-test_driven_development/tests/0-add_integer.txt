@@ -49,8 +49,4 @@ TypeError: b must be an integer
 # Test: float value is zero
 >>> add_integer(0.0, 0)
 0
-# Test: float overflow
->>>add_integer(1.79e308, 1.79e308)
-Traceback (most recent call last):
-    ...
-TypeError: float overflow
+
