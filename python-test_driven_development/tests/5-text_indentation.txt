@@ -1,20 +1,37 @@
-=======================
-Tests for text_indentation
-=======================
+"""
+This is the test for text_indentation function.
+"""
 
->>> import importlib
->>> text_indentation = importlib.import_module('5-text_indentation').text_indentation
+# Import the module
+>>> text_indentation = __import__("5-text_indentation").text_indentation
 
->>> text_indentation("First line. Second line? Third line: Fourth line.")
-First line.
+>>> text_indentation("Holberton.School")
+Holberton.
 
-Second line?
+School
 
-Third line:
+>>> text_indentation("Hello. World?")
+Hello.
 
-Fourth line.
+World?
 
->>> text_indentation(2)
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Is this the real life? Is this just fantasy?")
+Is this the real life?
+
+Is this just fantasy?
+
+>>> text_indentation("Here is a colon: check it out.")
+Here is a colon:
+
+check it out.
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation(1234)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
