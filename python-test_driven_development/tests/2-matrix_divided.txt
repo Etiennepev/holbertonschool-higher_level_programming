@@ -1,0 +1,79 @@
+"""
+This is the test module for matrix_divided.
+
+The example module supplies one function, matrix_divided. 
+
+"""
+
+# Importing the module
+>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+# Testing positive number
+>>> matrix = [[1, 2, 3], [4, 5, 6]] 
+>>> matrix_divided(matrix, 1)
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+# Testing floating number
+>>> matrix = [[1, 2, 3], [4, 5, 6]] 
+>>> matrix_divided(matrix, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+# Testing negative number
+>>> matrix = [[-1, 2, 3], [-4, 5, 6]] 
+>>> matrix_divided(matrix, -1)
+[[1.0, -2.0, -3.0], [4.0, -5.0, -6.0]]
+
+# Testing row in matrix_divided
+>>> matrix = [[1, 2, 3], [4, 5, 6, 7]] 
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Testing "" in matrix
+>>> matrix = [[1, 2, "3"], [4, 5, 6]] 
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing missing list
+>>> matrix_divided(1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing missing div
+>>> matrix = [[-1, 2, 3], [-4, 5, 6]] 
+>>> matrix_divided(matrix)
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Testing a wrong Type
+>>> matrix = "Hello World"
+>>> matrix_divided(matrix, -1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing a wrong Type
+>>> matrix = []
+>>> matrix_divided(matrix, 1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Testing wrong type div
+>>> matrix = [[-1, 2, 3], [-4, 5, 6]] 
+>>> matrix_divided(matrix, "Hello")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Testing div by 0
+>>> matrix = [[-1, 2, 3], [-4, 5, 6]] 
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
