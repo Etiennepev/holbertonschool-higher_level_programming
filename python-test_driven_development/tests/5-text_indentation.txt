@@ -1,28 +1,25 @@
->>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem.")
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+>>> text_indentation("Holberton. School")
+Holberton.
 
-Quonam modo?
+School
 
-Utrum igitur tibi litteram videor an totas paginas commovere?
+>>> text_indentation("Hello. World?")
+Hello.
 
-Non autem hoc:
+World?
 
-igitur ne illud quidem.
+>>> text_indentation("No punctuation here")
+No punctuation here
 
->>> text_indentation("Lorem ipsum dolor sit amet.")
-Lorem ipsum dolor sit amet.
+>>> text_indentation("Is this the real life? Is this just fantasy?")
+Is this the real life?
 
->>> text_indentation("Lorem ipsum dolor sit amet? Quonam modo.")
-Lorem ipsum dolor sit amet?
+Is this just fantasy?
 
-Quonam modo.
+>>> text_indentation("Here is a colon: check it out.")
+Here is a colon:
 
->>> text_indentation("Lorem: ipsum dolor? sit amet.")
-Lorem:
-
-ipsum dolor?
-
-sit amet.
+check it out.
 
 >>> text_indentation("")
 <BLANKLINE>
