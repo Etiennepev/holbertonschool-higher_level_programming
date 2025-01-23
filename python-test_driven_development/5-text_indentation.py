@@ -6,7 +6,7 @@ Provides a function `text_indentation` to indentate text.
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after each of these characters: ., ? and :
+    """Prints a text with 2 new lines and :
 
     Args:
         text (str): The text to be processed.
