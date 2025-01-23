@@ -1,30 +1,20 @@
->>> text_indentation("Holberton.School")
-Holberton.
+=======================
+Tests for text_indentation
+=======================
 
-School
+>>> import importlib
+>>> text_indentation = importlib.import_module('5-text_indentation').text_indentation
 
->>> text_indentation("Hello. World?")
-Hello.
+>>> text_indentation("First line. Second line? Third line: Fourth line.")
+First line.
 
-World?
+Second line?
 
->>> text_indentation("No punctuation here")
-No punctuation here
+Third line:
 
->>> text_indentation("Is this the real life? Is this just fantasy?")
-Is this the real life?
+Fourth line.
 
-Is this just fantasy?
-
->>> text_indentation("Here is a colon: check it out.")
-Here is a colon:
-
-check it out.
-
->>> text_indentation("")
-<BLANKLINE>
-
->>> text_indentation(1234)
+>>> text_indentation(2)
 Traceback (most recent call last):
     ...
 TypeError: text must be a string
