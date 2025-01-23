@@ -49,3 +49,9 @@ TypeError: size must be an integer
 Traceback (most recent call last):
     ...
 TypeError: size must be an integer
+
+# Test: invalid size (not an integer, string)
+>>> print_square("")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
