@@ -1,5 +1,6 @@
->>> text_indentation("Holberton. School")
+>>> text_indentation("Holberton.School")
 Holberton.
+
 School
 
 >>> text_indentation("Hello. World?")
