@@ -1,36 +1,33 @@
-#!/usr/bin/python3
-"""Unittest for text_indentation([..])
-"""
-import unittest
-from io import StringIO
-from unittest.mock import patch
-text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-class TestTextIndentation(unittest.TestCase):
-    """Class to test the text_indentation function"""
+Quonam modo?
 
-    def test_basic(self):
-        """Basic tests for the function"""
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            text_indentation("Hello. World?")
-            self.assertEqual(fake_out.getvalue(), "Hello.\n\nWorld?\n\n")
+Utrum igitur tibi litteram videor an totas paginas commovere?
 
-    def test_no_punctuation(self):
-        """Test with no punctuation"""
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            text_indentation("Hello World")
-            self.assertEqual(fake_out.getvalue(), "Hello World\n")
+Non autem hoc:
 
-    def test_multiple_sentences(self):
-        """Test with multiple sentences"""
-        with patch('sys.stdout', new=StringIO()) as fake_out:
-            text_indentation("Hello. World? This is a test: Yes it is.")
-            self.assertEqual(fake_out.getvalue(), "Hello.\n\nWorld?\n\nThis is a test:\n\nYes it is.\n\n")
+igitur ne illud quidem.
 
-    def test_invalid_type(self):
-        """Test with an invalid type"""
-        with self.assertRaises(TypeError):
-            text_indentation(1234)
+>>> text_indentation("Lorem ipsum dolor sit amet.")
+Lorem ipsum dolor sit amet.
 
-if __name__ == '__main__':
-    unittest.main()
+>>> text_indentation("Lorem ipsum dolor sit amet? Quonam modo.")
+Lorem ipsum dolor sit amet?
+
+Quonam modo.
+
+>>> text_indentation("Lorem: ipsum dolor? sit amet.")
+Lorem:
+
+ipsum dolor?
+
+sit amet.
+
+>>> text_indentation("")
+<BLANKLINE>
+
+>>> text_indentation(1234)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
