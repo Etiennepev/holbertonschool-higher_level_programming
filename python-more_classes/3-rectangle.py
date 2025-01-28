@@ -63,4 +63,5 @@ class Rectangle:
         rectangle = ""
         for i in range(self.height):
             print('#' * self.width)
+        print("#" * self.width, end="")
         return ""
