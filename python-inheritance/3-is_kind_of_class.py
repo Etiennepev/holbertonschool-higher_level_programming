@@ -12,4 +12,4 @@ def is_kind_of_class(obj, a_class):
     This method sorts the list and prints the sorted version, leaving the
     original list unchanged.
     """
-    return type(obj) is a_class
+    return isinstance(obj, a_class)
