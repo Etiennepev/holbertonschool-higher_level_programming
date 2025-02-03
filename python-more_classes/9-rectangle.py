@@ -23,17 +23,11 @@ class Rectangle:
         Raises:
             TypeError: If width or height are not integers.
             ValueError: If width or height are less than 0.
-        
         """
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        if height < 0:
-            raise ValueError("height must be >= 0")
-        
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        
+
     @property
     def width(self):
         return self.__width
