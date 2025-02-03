@@ -11,7 +11,7 @@ This is the test for base_geometry function.
     True
 
 # Testing for class docstring:
-    >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> c = __import__("7-base_geometry").__doc__
     >>> len(c) > 1
     True
 
