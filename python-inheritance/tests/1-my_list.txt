@@ -2,20 +2,20 @@
 This is the test for print_sorted function.
 """
 
-MyList = __import__('1-my_list').MyList
+# Importing the function from the module:
+    >>> MyList = __import__("1-my_list").MyList
 
-my_list = MyList()
-my_list.append(1)
-my_list.append(4)
-my_list.append(2)
-my_list.append(3)
-my_list.append(5)
+# Testing for module docstring:
+    >>> m = __import__("1-my_list").__doc__
+    >>> len(m) > 1
+    True
 
-print(my_list)
-[1, 4, 2, 3, 5]
+# Testing for class docstring:
+    >>> c = __import__("1-my_list").MyList.__doc__
+    >>> len(c) > 1
+    True
 
-my_list.print_sorted()
-[1, 2, 3, 4, 5]
-
-print(my_list)
-[1, 4, 2, 3, 5]
+# Testing for method docstring:
+	>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(mod) > 1
+	True
