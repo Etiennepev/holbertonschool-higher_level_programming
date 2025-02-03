@@ -3,7 +3,7 @@ This is the test for base_geometry function.
 """
 
 # Importing the function from the module:
-    >>> MyList = __import__("7-base_geometry").MyList
+    >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 # Testing for module docstring:
     >>> m = __import__("7-base_geometry").__doc__
