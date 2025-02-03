@@ -1,14 +1,50 @@
-Test 1:
-Create an instance of MyList and print the sorted list.
-Input: [3, 1, 2]
-Expected Output: [1, 2, 3]
+"""
+This is the test for print_sorted function of MyList class.
+"""
 
-Test 2:
-Create another instance of MyList with negative numbers.
-Input: [-1, -3, 2]
-Expected Output: [-3, -1, 2]
+# Import the MyList class
+>>> MyList = __import__("my_list").MyList
 
-Test 3:
-Already sorted list.
-Input: [1, 2, 3]
-Expected Output: [1, 2, 3]
+# Test 1: print a sorted list of size 3
+>>> my_list = MyList([3, 1, 2])
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+# Test 2: print a sorted list of size 5
+>>> my_list = MyList([5, 3, 8, 6, 2])
+>>> my_list.print_sorted()
+[2, 3, 5, 6, 8]
+
+# Test 3: print an empty list
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+
+# Test 4: print a list with negative numbers
+>>> my_list = MyList([1, -3, 5, -1, 2])
+>>> my_list.print_sorted()
+[-3, -1, 1, 2, 5]
+
+# Test 5: print a list with already sorted numbers
+>>> my_list = MyList([1, 2, 3, 4, 5])
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+# Test 6: print a list with a single number
+>>> my_list = MyList([7])
+>>> my_list.print_sorted()
+[7]
+
+# Test 7: invalid input (list containing a string)
+>>> my_list = MyList([1, "hello", 3])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: list contains non-integer elements
+
+# Test 8: invalid input (non-list type)
+>>> my_list = MyList("hello")
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: input must be a list of integers
