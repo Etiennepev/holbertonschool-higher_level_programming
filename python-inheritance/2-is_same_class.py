@@ -8,8 +8,8 @@ This module defines if is the same class
 def is_same_class(obj, a_class):
     """
     Prints the list in ascending order.
-    
-    This method sorts the list and prints the sorted version, leaving the 
+
+    This method sorts the list and prints the sorted version, leaving the
     original list unchanged.
     """
     return type(obj) is a_class
