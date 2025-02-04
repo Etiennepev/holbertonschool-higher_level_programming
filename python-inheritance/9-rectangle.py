@@ -25,7 +25,7 @@ class Rectangle(BaseGeometry):
         Calculates and returns the area of the rectangle.
         """
         return self.__width * self.__height
-    
+
     def __str__(self):
         """
         Returns a string representation of the rectangle.
