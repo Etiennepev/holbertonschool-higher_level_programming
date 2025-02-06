@@ -21,7 +21,7 @@ class Shape(ABC):
     
 class Circle(Shape):
     def __init__(self, radius=0):
-        if isinstance is not (radius(int, float)):
+        if isinstance is not (radius, (int, float)):
             raise ValueError("Must be integer or float")
         else:
             self.radius = abs(radius)
