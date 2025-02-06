@@ -44,5 +44,6 @@ def shape_info(shape):
     """
     shape_info methode
     """
-    print("Area : {}".format(shape.area()))
-    print("Perimeter: {}".format(shape.perimeter()))
+    if hasattr(shape,"area") and hasattr(shape, "perimeter"):
+        print("Area : {}".format(shape.area()))
+        print("Perimeter: {}".format(shape.perimeter()))
