@@ -19,4 +19,3 @@ class Student:
             if hasattr(self, attr):
                 result[attr] = getattr(self, attr)
         return result
-            
