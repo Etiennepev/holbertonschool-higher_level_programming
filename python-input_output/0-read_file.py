@@ -6,6 +6,8 @@ Provides 'Read file'
 
 
 def read_file(filename=""):
-    with open("my_file_0.txt", "r", encoding="utf-8") as f:
-        for line in f:
-            print(line.strip(), end="")
+    """
+    Reads a text file (UTF-8) and prints its content to stdout.
+    """
+    with open(filename, "r", encoding="utf-8") as f:
+            print(f.read(), end="")
