@@ -3,7 +3,7 @@
 Module: basic serialization
 Provides 'basic serialization'
 """
-import csv 
+import csv
 import json
 """ import csv and json"""
 
@@ -16,5 +16,5 @@ def convert_csv_to_json(filename):
         with open(filename, mode='w', encoding='utf-8') as json_file:
             json.dump(rows, json_file, indent=4)
         return True
-    except:
+    except FileNotFoundError:
         return False
