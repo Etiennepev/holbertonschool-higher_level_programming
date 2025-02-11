@@ -20,19 +20,19 @@ class CustomObject:
         self.name = name
         self.age = age
         self.is_student = is_student
-        
+
     def display(self):
         for attr, value in self.__dict__.items():
             print("{}: {}".format(attr, value))
-    
+
     def serialize(self, filename):
         with open(filename, "wb") as file:
             pickle.dump(self, file)
 
-    @classmethod 
+    @classmethod
     def deserialize(cls, filename):
         try:
             with open(filename, 'rb') as file:
                 return pickle.load(file)
-        except(FileNotFoundError, pickle.UnpicklingError) as e:
+        except (FileNotFoundError, pickle.UnpicklingError) as e:
             return None
