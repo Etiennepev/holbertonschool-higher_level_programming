@@ -23,7 +23,7 @@ def get_users():
 
 @app.route("/status")
 def status():
-    """Return user data if found"""
+    """Return the API status"""
     return "OK"
 
 
@@ -38,13 +38,13 @@ def get_user(username):
         return jsonify({"error": "User not found"}), 404
 
 
-@app.route("/add_user()", methods=["POST"])
+@app.route("/add_user", methods=["POST"])
 def add_user():
     """Add a new user"""
     data = request.get_json()
     username = data.get("username")
 
-    if "username" not in data:
+    if not username :
         return jsonify({"error": "Username is required"}), 400
     users[username] = data
     return jsonify({"message": "User added", "user": data}), 201
