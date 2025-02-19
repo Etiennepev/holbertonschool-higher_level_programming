@@ -11,6 +11,7 @@ users = {}
 
 @app.route("/")
 def home():
+    """Welcome message"""
     return "Welcome to the Flask API!"
 
 
@@ -28,6 +29,7 @@ def status():
 
 @app.route("/users/<username>")
 def get_user(username):
+    """Return the user"""
     user = users.get(username)
 
     if user:
