@@ -20,8 +20,8 @@ if __name__ == "__main__":
                          port=3306)
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name = %s \
-        ORDER BY id ASC", (state_name,))
+    cursor.execute("SELECT * FROM states WHERE name LIKE '%{}%' \
+    ORDER BY id ASC".format(state_name))
     results = cursor.fetchall()
     for row in results:
         print(row)
