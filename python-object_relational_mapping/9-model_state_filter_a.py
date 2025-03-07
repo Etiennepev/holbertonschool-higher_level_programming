@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).filter(State.name.like('%a%'))\
-        .order_by(asc(State.name)).all()
+        .order_by(State.name).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
     session.close()
