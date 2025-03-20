@@ -1,7 +1,11 @@
 #!/usr/bin/python3
 """Generates personalized invitation files"""
+from os.path import exists
 
 def generate_invitations(template, attendees):
+    
+    if not exists("template.txt"):
+        raise FileNotFoundError("template.txt not found")
     
     if not isinstance(template, str):
         print("Error: Template must be a string")
